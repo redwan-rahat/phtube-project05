@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "portfolio-projects-rahat"
+  },
+  "targets": {
+    "portfolio-projects-rahat": {
+      "hosting": {
+        "phtube": [
+          "phtube-by-rahat"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

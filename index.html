@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHTube</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body> 
+    <section >
+
+    <header class="bg-white pt-12  lg:py-16">
+       <nav>
+        <div id="nav-left" class="lg:flex lg:justify-between lg:mx-24 ">
+            <img src="images/Logo.png" onclick="reload()" class="cursor-pointer w-auto m-auto lg:m-0" alt="">
+            <button onclick="loaddata(1,false)" class=" m-auto lg:m-0 mt-1 lg:mt-0 scale-50 lg:scale-100 block lg:flex px-6 py-2 bg-stone-300 hover:bg-red-400 hover:text-white text-black text-xl font-bold rounded-lg ">Sort by view</button> 
+            <button  class="px-6 py-2 bg-[#FF1F3D] text-white text-xl m-auto lg:m-0 scale-50 lg:scale-100 block lg:flex"><a href="blog.html">Blog</a></button>
+        </div>
+       </nav>
+    </header>
+    <div class="bg-white">
+        <hr class="w-11/12  m-auto ">
+    </div>
+    
+    <main class="bg-white ">
+            <div class="md:flex lg:gap-8 md:justify-center lg:py-12 md:py-8  lg:ml-20">
+                <button id="all" onclick="loaddata(1000,true) " class="px-8 py-2 block scale-50 md:scale-75 md:flex m-auto lg:scale-100 md:m-0  bg-stone-200 hover:bg-[#FF1F3D] hover:text-white hover:duration-300 rounded-md font-semibold text-xl text-center text-black ">All</button>
+                <button id="music" onclick="loaddata(1001,true)" class="px-8 py-2 block scale-50 md:scale-75 md:flex m-auto lg:scale-100 md:m-0  bg-stone-200 hover:bg-[#FF1F3D] hover:text-white hover:duration-300 rounded-md font-semibold text-xl text-center text-black ">Music</button>
+                <button id="comedy" onclick="loaddata(1003,true)" class="px-8 py-2 block scale-50 md:scale-75 md:flex m-auto lg:scale-100 md:m-0  bg-stone-200 hover:bg-[#FF1F3D] hover:text-white hover:duration-300 rounded-md font-semibold text-xl text-center text-black ">Comedy</button>
+                <button id="drawing" onclick="loaddata(1005,true)" class="px-8 py-2 block scale-50 md:scale-75 md:flex m-auto lg:scale-100 md:m-0  bg-stone-200 hover:bg-[#FF1F3D] hover:text-white hover:duration-300 rounded-md font-semibold text-xl text-center text-black ">Drawing</button>
+            </div>
+
+            <div class="text-center" id="loading" hidden>
+              <span  class=" loading loading-bars loading-lg lg:w-48 md:m-32 pt-8 bg-red-500"></span>
+            </div>
+            
+            <div class="text-center mt-24 md:mt-36 hidden lg:ml-20 " id="error">
+              <img src="images/Icon.png" class="m-auto " alt="">
+              <h2 class="text-black text-2xl lg:text-4xl font-bold lg:w-1/4 m-auto mt-6">Oops!! Sorry, There is no content here</h2>
+            </div>
+
+            <div id="main-container" class=" bg-white md:flex lg:w-11/12 flex-wrap m-auto justify-center lg:justify-normal lg:ml-28 lg:pl-8">
+
+            </div>
+
+    </main>
+
+    
+      
+    
+</section>
+    <script src="API.js"></script>
+   
+</body>
+</html>
